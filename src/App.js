@@ -1,13 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import Header from './Components/Header';
+import Home from './Components/Home';
+import Join from './Components/Join';
+import Login from './Components/Login';
 
 
 function App() {
     return (
         <div className="App">
-            <h1>리액트시작</h1>
-            <Button variant="outline-secondary">버튼</Button>
+            <Header/>
+
+            <Switch>
+                <Route path="/" component={Home} exact={true}/>
+                <Route path="/login" component={Login}/>
+                <Route path="/join" component={Join}/>
+            </Switch>
         </div>
     );
 }
