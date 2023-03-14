@@ -37,9 +37,9 @@ const Users = () => {
                                 <Col xs={2}>
                                 <img src={u.photo} width={100} height={120} />
                                 </Col>
-                                <Col xs={10} className='position-relative'>
-                                    <div className='position-absolute top-50 start-50 translate-middle'>{u.name} [{u.email}]</div>
-                                    <div className='position-absolute bottom-50 start-50 translate-middle'>{u.address}</div>
+                                <Col xs={10} className='mx-auto my-auto'>
+                                    <div>{u.name} [{u.email}]</div>
+                                    <div>{u.address}</div>
                                 </Col>
                             </Row>
                         </Card.Body>
