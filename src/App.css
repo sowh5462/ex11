@@ -4,5 +4,16 @@
   width: 80%;
 }
 
+.header a {
+  text-decoration: none;
+  color: lightgray;
+  margin-left: 20px;
+}
 
+.header a:hover {
+  font-weight: bold;
+}
 
+.header span {
+  margin-left: 20px;
+}
