@@ -9,6 +9,8 @@ const Join = ({history}) => {
     const auth = getAuth(app);
     const db = getFirestore(app);
 
+    const [loading, setLoading] = useState(false);
+
     const [form, setForm] = useState({
         email: 'user01@email.com',
         password: '12341234'
@@ -24,6 +26,7 @@ const Join = ({history}) => {
         e.preventDefault();
         // console.log(form);
         if(!window.confirm('가입하시겠습니까')) return;
+        setLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
         .then((success) => {
             //유저정보저장
@@ -34,14 +37,17 @@ const Join = ({history}) => {
                 photo: ''
             });
             alert('회원가입 성공');
+            setLoading(false);
             history.push('/login');
         })
         .catch((error) => {
             alert('회원가입 실패' + error.message);
+            setLoading(false)
         })
     };
 
 
+    if(loading) return <h1>Loading...</h1>
     return (
         <div>
             <Row className='position-absolute top-50 start-50 translate-middle mt-3'>

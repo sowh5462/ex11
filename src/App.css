@@ -17,3 +17,7 @@
 .header span {
   margin-left: 20px;
 }
+
+.header span:hover {
+  cursor: pointer;
+}

@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className='my=4 justify-content-center'>
             <Container>
-                <Row>
+                <Row className='text-center my-5'>
                     <Col>
                     <h1>Home</h1>
                     </Col>

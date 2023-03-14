@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink, withRouter } from 'react-router-dom';
 
@@ -14,6 +13,8 @@ const Header = ({ history }) => {
         history.push('/')
     };
 
+    
+
     return (
         <div>
             <img src="https://m.media-amazon.com/images/M/MV5BYmZjYTZjMDktZmJhNi00NGEwLWIyNzAtYjhmNTI1YzAwNjEyXkEyXkFqcGdeQXVyMjY5MTE2MzE@._V1_.jpg"
@@ -22,11 +23,11 @@ const Header = ({ history }) => {
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/users">UserList</NavLink>
                 {email ? 
-                <NavLink to="#">Logout</NavLink>
+                <NavLink to="#" onClick={onLogout}>Logout</NavLink>
                 :
                 <NavLink to="/login">Login</NavLink>
                 }
-                {email && <span style={{ color: 'white' }}>{email}</span>}
+                {email && <span style={{ color: 'white' }} onClick={()=>history.push('/mypage')}>{email}</span>}
             </Navbar>
             <br />
 
