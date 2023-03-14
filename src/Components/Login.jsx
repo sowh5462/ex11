@@ -36,7 +36,7 @@ const Login = ({history}) => {
         <div>
             <Row className='position-absolute top-50 start-50 translate-middle mt-3'>
                 <Col>
-                    <Card style={{ width: '100%' }}>
+                    <Card style={{ width: '30rem' }}>
                         <Card.Title className='p-3 text-center'>
                             <h3>Login</h3>
                         </Card.Title>
